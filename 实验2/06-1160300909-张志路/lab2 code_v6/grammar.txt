@@ -1,0 +1,39 @@
+P'-> P
+
+P -> D						
+P -> S							
+S -> S S				
+
+D -> D D | proc id ; D S | T id ; 		
+T -> X C | record D 			
+X -> integer | real				
+C -> [ num ] C | ¦Å 	
+
+
+S -> id = E ; | L = E ;	
+E -> E + E1 | E1
+E1 -> E1 * E2 | E2  	
+E2 -> ( E ) | - E | id  | num | L
+L -> id [ E ] | L [ E ]
+
+				
+S -> S1 | S2
+S1 -> if B then S1 else S1 | while B do S0	     
+S2 -> if B then S1 else S2 | if B then  S0 
+S0  -> begin S3 end
+S1 -> begin S3 end
+S2 -> begin S3 end
+S3 -> S3 ; S | S
+
+
+B -> B or B1 | B1
+B1 -> B1 and B2 | B2
+B2 -> not B | ( B ) | E R E | true | false	
+	
+R -> < | <= | == | != | > | >=		
+
+
+S -> call id ( EL )	
+EL -> EL , E						
+EL -> E	
+			

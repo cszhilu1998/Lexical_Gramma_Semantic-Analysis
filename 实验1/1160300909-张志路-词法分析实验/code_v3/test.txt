@@ -1,0 +1,55 @@
+while(num != 100)
+{
+    num++;
+}
+
+/*test*/
+//test
+float a = 1.22;
+float b = 2.32e+1;
+float c = 22.3E-1;
+int d = 22E1;
+s[1] = 'a';
+char s = '\t';
+char s = '\'';
+String t = "ZhangZhilu";
+/*Zhang Zhilu
+1160300909
+*/
+
+/* Sort function */
+void bubbleSort(int *arr, int n) 
+{
+    for (int i = 0; i < n-1; i++)
+        for (int j = 0; j < n-i-1; j++)
+        {
+            if (arr[j] > arr[j+1])
+            {
+                int temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+            }
+        }
+}
+
+int main() 
+{
+    int arr[] = { 10,6,5,2,3,8,7,4,9,1 };
+    bubbleSort(arr, n);
+    return 0;
+}
+
+
+/*Error*/
+int 1_qqq = 3;
+float e = 2.2.2;
+float t = 1..1;
+char s = '\t;
+String ff = "zhangzhilu;
+/*zhang
+zhi
+lu
+
+
+
+

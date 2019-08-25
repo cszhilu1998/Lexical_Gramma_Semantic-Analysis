@@ -1,0 +1,71 @@
+proc maxminavg;
+    integer[3] a;
+    integer max;
+    integer min;
+    integer sum;
+    integer i;
+    real avg;
+
+    a[1]=1;
+    a[2]=2;
+    a[3]=3;
+    sum=0;
+    max=a[1];
+    min=a[1];
+    i=1;
+    
+    while true do 
+    begin
+        a=a+1;
+    end
+    
+    if a[i]>max then 
+    begin
+        max=a[i];
+    end
+    
+    if a[i]>max then 
+    begin
+        max=a[i]; 
+    end
+    else 
+    begin
+        a=1;
+    end
+    
+    while true do 
+    begin
+    
+        if i<=3 then 
+        begin
+            sum=sum+a[i];
+        end
+        
+        if a[i]>max then 
+        begin
+            max=a[i];
+        end
+        
+        if a[i]<min then 
+        begin
+            min=a[i];
+        end
+        else 
+        begin
+            call fuction(b,c,d)
+        end
+        
+        i=i+1;
+        avg=sum*1;
+    end
+    
+    a[1]]>=1;;
+    
+    if i<=<3 then 
+    begin
+        a=a+1;
+    end
+    
+    
+ 
+        

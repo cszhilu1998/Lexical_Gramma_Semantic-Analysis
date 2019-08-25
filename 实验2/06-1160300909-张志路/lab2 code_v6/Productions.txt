@@ -1,0 +1,290 @@
+X -> integer
+C -> ε
+C -> [ num ] C
+T -> X C
+D -> T id ;
+X -> integer
+C -> ε
+T -> X C
+D -> T id ;
+X -> integer
+C -> ε
+T -> X C
+D -> T id ;
+X -> integer
+C -> ε
+T -> X C
+D -> T id ;
+X -> integer
+C -> ε
+T -> X C
+D -> T id ;
+X -> real
+C -> ε
+T -> X C
+D -> T id ;
+D -> D D
+D -> D D
+D -> D D
+D -> D D
+D -> D D
+E2 -> num
+E1 -> E2
+E -> E1
+L -> id [ E ]
+E2 -> num
+E1 -> E2
+E -> E1
+S -> L = E ;
+E2 -> num
+E1 -> E2
+E -> E1
+L -> id [ E ]
+E2 -> num
+E1 -> E2
+E -> E1
+S -> L = E ;
+E2 -> num
+E1 -> E2
+E -> E1
+L -> id [ E ]
+E2 -> num
+E1 -> E2
+E -> E1
+S -> L = E ;
+E2 -> num
+E1 -> E2
+E -> E1
+S -> id = E ;
+E2 -> num
+E1 -> E2
+E -> E1
+L -> id [ E ]
+E2 -> L
+E1 -> E2
+E -> E1
+S -> id = E ;
+E2 -> num
+E1 -> E2
+E -> E1
+L -> id [ E ]
+E2 -> L
+E1 -> E2
+E -> E1
+S -> id = E ;
+E2 -> num
+E1 -> E2
+E -> E1
+S -> id = E ;
+B2 -> true
+B1 -> B2
+B -> B1
+E2 -> id
+E1 -> E2
+E -> E1
+E2 -> num
+E1 -> E2
+E -> E + E1
+S -> id = E ;
+S3 -> S
+S0 -> begin S3 end
+S1 -> while B do S0
+S -> S1
+E2 -> id
+E1 -> E2
+E -> E1
+L -> id [ E ]
+E2 -> L
+E1 -> E2
+E -> E1
+R -> >
+E2 -> id
+E1 -> E2
+E -> E1
+B2 -> E R E
+B1 -> B2
+B -> B1
+E2 -> id
+E1 -> E2
+E -> E1
+L -> id [ E ]
+E2 -> L
+E1 -> E2
+E -> E1
+S -> id = E ;
+S3 -> S
+S0 -> begin S3 end
+S2 -> if B then S0
+S -> S2
+E2 -> id
+E1 -> E2
+E -> E1
+L -> id [ E ]
+E2 -> L
+E1 -> E2
+E -> E1
+R -> >
+E2 -> id
+E1 -> E2
+E -> E1
+B2 -> E R E
+B1 -> B2
+B -> B1
+E2 -> id
+E1 -> E2
+E -> E1
+L -> id [ E ]
+E2 -> L
+E1 -> E2
+E -> E1
+S -> id = E ;
+S3 -> S
+S1 -> begin S3 end
+E2 -> num
+E1 -> E2
+E -> E1
+S -> id = E ;
+S3 -> S
+S2 -> begin S3 end
+S2 -> if B then S1 else S2
+S -> S2
+B2 -> true
+B1 -> B2
+B -> B1
+E2 -> id
+E1 -> E2
+E -> E1
+R -> <=
+E2 -> num
+E1 -> E2
+E -> E1
+B2 -> E R E
+B1 -> B2
+B -> B1
+E2 -> id
+E1 -> E2
+E -> E1
+E2 -> id
+E1 -> E2
+E -> E1
+L -> id [ E ]
+E2 -> L
+E1 -> E2
+E -> E + E1
+S -> id = E ;
+S3 -> S
+S0 -> begin S3 end
+S2 -> if B then S0
+S -> S2
+E2 -> id
+E1 -> E2
+E -> E1
+L -> id [ E ]
+E2 -> L
+E1 -> E2
+E -> E1
+R -> >
+E2 -> id
+E1 -> E2
+E -> E1
+B2 -> E R E
+B1 -> B2
+B -> B1
+E2 -> id
+E1 -> E2
+E -> E1
+L -> id [ E ]
+E2 -> L
+E1 -> E2
+E -> E1
+S -> id = E ;
+S3 -> S
+S0 -> begin S3 end
+S2 -> if B then S0
+S -> S2
+E2 -> id
+E1 -> E2
+E -> E1
+L -> id [ E ]
+E2 -> L
+E1 -> E2
+E -> E1
+R -> <
+E2 -> id
+E1 -> E2
+E -> E1
+B2 -> E R E
+B1 -> B2
+B -> B1
+E2 -> id
+E1 -> E2
+E -> E1
+L -> id [ E ]
+E2 -> L
+E1 -> E2
+E -> E1
+S -> id = E ;
+S3 -> S
+S1 -> begin S3 end
+E2 -> id
+E1 -> E2
+E -> E1
+EL -> E
+E2 -> id
+E1 -> E2
+E -> E1
+EL -> EL , E
+E2 -> id
+E1 -> E2
+E -> E1
+EL -> EL , E
+S -> call id ( EL )
+S3 -> S
+S2 -> begin S3 end
+S2 -> if B then S1 else S2
+S -> S2
+E2 -> id
+E1 -> E2
+E -> E1
+E2 -> num
+E1 -> E2
+E -> E + E1
+S -> id = E ;
+E2 -> id
+E1 -> E2
+E2 -> num
+E1 -> E1 * E2
+E -> E1
+S -> id = E ;
+S -> S S
+S -> S S
+S -> S S
+S -> S S
+S3 -> S
+S0 -> begin S3 end
+S1 -> while B do S0
+S -> S1
+E2 -> num
+E1 -> E2
+E -> E1
+L -> id [ E ]
+E2 -> id
+E1 -> E2
+E -> E1
+E2 -> num
+E1 -> E2
+E -> E + E1
+S -> L = E ;
+S -> S S
+S -> S S
+S -> S S
+S -> S S
+S -> S S
+S -> S S
+S -> S S
+S -> S S
+S -> S S
+S -> S S
+S -> S S
+D -> proc id ; D S
+P -> D
